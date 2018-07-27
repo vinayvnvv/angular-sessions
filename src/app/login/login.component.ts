@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: '[app-login]',
+  selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -9,7 +9,6 @@ export class LoginComponent implements OnInit, AfterViewInit  {
   
   country: Country[] = [];
   add: boolean = true;
-
 
 
   constructor() { }
