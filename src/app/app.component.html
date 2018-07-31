@@ -1,1 +1,26 @@
-<div app-login></div>
+<input placeholder="Name" type="" name="" [(ngModel)]="form.name">
+<input placeholder="Phone" type="" name="" [(ngModel)]="form.phone">
+<input placeholder="Address" type="" name="" [(ngModel)]="form.address">
+
+<button (click)="addContact()">Add</button>
+
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Phone No</th>
+			<th>Addres</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let contact of contacts; let i = index">
+			<td>{{contact.name}}</td>
+			<td>{{contact.phone}}</td>
+			<td>{{contact.address}}</td>
+			<td><button (click)="deleteContact(i)">delete</button></td>
+		</tr>
+	</tbody>
+
+
+</table>
