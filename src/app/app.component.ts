@@ -9,6 +9,7 @@ export class AppComponent {
 
 	contacts: Contacts[] = [];
 
+
 	form: Contacts = {
 		name: "",
 		phone: "",
@@ -32,7 +33,11 @@ export class AppComponent {
 		console.log('deleting index', index)
 		this.contacts.splice(index, 1);
 	}
-  
+
+	onChildDelete(index) {
+		this.deleteContact(index);
+		console.log(index)
+	}
 
 
 }
