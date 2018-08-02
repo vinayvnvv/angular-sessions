@@ -3,21 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 
+import { RouterModule } from '@angular/router';
+
+import { routes }  from './app.router';
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { ColorChangeComponent } from './color-change/color-change.component';
-import { ListItemComponent } from './list-item/list-item.component';
+import { InboxComponent } from './inbox/inbox.component';
+import { SentItemsComponent } from './sent-items/sent-items.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ColorChangeComponent,
-    ListItemComponent
-  ],
+    InboxComponent,
+    SentItemsComponent
+      ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

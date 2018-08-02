@@ -1,23 +1,14 @@
-<input placeholder="Name" type="" name="" [(ngModel)]="form.name">
-<input placeholder="Phone" type="" name="" [(ngModel)]="form.phone">
-<input placeholder="Address" type="" name="" [(ngModel)]="form.address">
-
-<button (click)="addContact()">Add</button>
-
-<table>
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Phone No</th>
-			<th>Addres</th>
-			<th>Action</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr app-list-item (onDelete)="onChildDelete(i)" [item]="contact" *ngFor="let contact of contacts; let i = index">
-			
-		</tr>
-	</tbody>
-
-
-</table>
+<div class="app">
+	<div class="header">Gmail</div>
+	<div class="content">
+		<div class="sidebar">
+			<ul class="list">
+				<li routerLink="/inbox" routerLinkActive="active">Inbox</li>
+				<li [routerLink]="['/sent-items']" routerLinkActive="active">Sent items</li>
+			</ul>
+		</div>
+		<div class="container">
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+</div>
