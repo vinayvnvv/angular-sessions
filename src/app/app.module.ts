@@ -12,6 +12,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { InboxComponent } from './inbox/inbox.component';
 import { SentItemsComponent } from './sent-items/sent-items.component';
+
+import { CommonService } from './services/common.service';
 @NgModule({
   declarations: [
     AppComponent,
