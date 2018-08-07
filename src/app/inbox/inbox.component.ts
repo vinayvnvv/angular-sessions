@@ -17,4 +17,11 @@ export class InboxComponent implements OnInit {
   	console.log(this.common.replaceAdd("Hello vinay"))
   }
 
+  onFocus() {
+  	console.log('focus')
+  }
+  onBlur() {
+  	console.log('blur')
+  }
+
 }
