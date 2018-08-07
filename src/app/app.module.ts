@@ -1,16 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { RouterModule } from '@angular/router';
+
+import { routes }  from './app.router';
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { InboxComponent } from './inbox/inbox.component';
+import { SentItemsComponent } from './sent-items/sent-items.component';
+
+import { CommonService } from './services/common.service';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
-  ],
+    LoginComponent,
+    InboxComponent,
+    SentItemsComponent
+      ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
